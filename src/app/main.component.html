@@ -1,0 +1,16 @@
+<p>Angularチェックボックス</p>
+<input
+  id="hoge"
+  type="checkbox"
+  [(ngModel)]="checkboxes.isHoge"
+  (change)="onCheckedChange('hoge', $event)"
+/>
+<label for="hoge">HOGE</label>
+<button
+  id="piyo"
+  type="button"
+  [disabled]="!checkboxes.isHoge"
+  (click)="onCheckedChange('piyo')"
+>
+  PIYO
+</button>
